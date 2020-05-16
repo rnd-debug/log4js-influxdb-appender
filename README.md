@@ -1,5 +1,5 @@
 # log4js-influxdb-appender
-![NPM](https://nodei.co/npm/log4js-influxdb-appender.png?downloads=true)](https://nodei.co/npm/log4js-influxdb-appender/)
+[![NPM](https://nodei.co/npm/log4js-influxdb-appender.png?downloads=true)](https://nodei.co/npm/log4js-influxdb-appender/)
 
 A simple appender for [log4js](https://www.npmjs.com/package/log4js) that writes to a [InfluxDB](https://www.influxdata.com/) database. Built on top of the [node-influxdb client](https://www.npmjs.com/package/influx).
 

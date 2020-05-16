@@ -41,9 +41,6 @@ time                      data                                                  
 2020-05-01T10:13:01.999Z  { param1: 'can serialize', param2: 'objects too' }    TRACE   6123
 ```
 
-### Full configuration
-
-See below the [Examples](#Examples) section.
 
 ## Configuration
 
@@ -57,6 +54,7 @@ See below the [Examples](#Examples) section.
 - `tags` - `array` - (optional, default to `['level', 'pid']`). Fields of the logging event to be used as tags in your InfluxDB.
 - `maxBatchSize` - `number` - (optional, defaults to 1) number of logs to buffer before sending them to InfluxDB. Note that node-influxdb recommends several hundreds.
 - `layout` - (optional, defaults to layouts.messagePassThroughLayout) - the layout to use for logged messages.
+
 
 ## Examples
 

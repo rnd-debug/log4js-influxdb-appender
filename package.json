@@ -1,0 +1,80 @@
+{
+  "name": "log4js-influxdb-appender",
+  "version": "0.0.1",
+  "description": "Simple InfluxDB appender for log4js-node",
+  "homepage": "https://github.com/rnd-debug/log4js-influxdb-appender",
+  "main": "./lib/index.js",
+  "types": "./types/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "lib",
+    "types"
+  ],
+  "scripts": {
+    "prepush": "npm test",
+    "commitmsg": "validate-commit-msg",
+    "pretest": "eslint 'lib/**/*.js' 'test/**/*.js'",
+    "test": "tap 'test/tap/**/*.js' --cov",
+    "codecov": "tap 'test/tap/**/*.js' --cov --coverage-report=lcov && codecov"
+  },
+  "keywords": [
+    "log4js",
+    "node",
+    "logging",
+    "appender",
+    "log",
+    "influx",
+    "influxdb"
+  ],
+  "author": "rnd-debug",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rnd-debug/log4js-influxdb-appender.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rnd-debug/log4js-influxdb-appender/issues"
+  },
+  "engines": {
+    "node": ">=8.0"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "influx": "^5.5.1",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@log4js-node/sandboxed-module": "^2.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "codecov": "^3.6.5",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "husky": "^4.2.5",
+    "log4js": "^6.2.1",
+    "tap": "^14.10.7"
+  },
+  "browser": {
+    "os": false
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "lib/**/*.js"
+    ],
+    "require": [
+      "./test/sandbox-coverage"
+    ]
+  }
+}

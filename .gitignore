@@ -1,0 +1,7 @@
+# Dev 
+node_modules/
+.vscode/
+# Test
+logs/
+*.log
+main.js

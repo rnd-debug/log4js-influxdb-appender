@@ -59,6 +59,36 @@ See below the [Examples](#Examples) section.
 
 ## Examples
 
+```javascript
+const log4js = require('log4js');
+log4js.configure({
+  appenders: {
+    influx: {
+      type: 'log4js-influxdb-appender',
+      database: 'myDatabase',
+      measurement: 'listOfScientists',
+      maxBatchSize: 1000,
+      fields: ['cheese', 'quantity'],
+      tags: ['scientist'],
+    },
+  },
+  categories: {
+    default: { appenders: ['influx'], level: 'trace' },
+  },
+});
+const logger = log4js.getLogger();
+logger.info({ scientist: 'Marie Curie', cheese: 'roquefort', quantity: '100' });
+```
+
+This will result in a message recorded in the database `myDatabase`, measurement `listOfScientists`, of an InfluxDB (running on `localhost:8086`), as following :
+
+```
+name: listOfScientists
+time                     cheese    quantity scientist
+----                     ------    -------- ---------
+2020-05-16T10:10:14.611Z roquefort 100      Marie Curie
+```
+
 ## Acknowlegments
 
 - [node-influxdb](https://www.npmjs.com/package/influx)

@@ -1,4 +1,5 @@
-# log4js-influxdb-appender
+# log4js-influxdb-appender [![Build Status](https://secure.travis-ci.org/rnd-debug/log4js-influxdb-appender.png?branch=master)](https://travis-ci.com/github/rnd-debug/log4js-influxdb-appender) [![codecov](https://codecov.io/gh/rnd-debug/log4js-influxdb-appender/branch/master/graph/badge.svg)](https://codecov.io/gh/rnd-debug/log4js-influxdb-appender)
+
 [![NPM](https://nodei.co/npm/log4js-influxdb-appender.png?downloads=true)](https://nodei.co/npm/log4js-influxdb-appender/)
 
 A simple appender for [log4js](https://www.npmjs.com/package/log4js) that writes to a [InfluxDB](https://www.influxdata.com/) database. Built on top of the [node-influxdb client](https://www.npmjs.com/package/influx).
@@ -41,7 +42,6 @@ time                      data                                                  
 2020-05-01T10:13:01.999Z  { param1: 'can serialize', param2: 'objects too' }    TRACE   6123
 ```
 
-
 ## Configuration
 
 - `type` - `log4js-influxdb-appender`
@@ -54,7 +54,6 @@ time                      data                                                  
 - `tags` - `array` - (optional, default to `['level', 'pid']`). Fields of the logging event to be used as tags in your InfluxDB.
 - `maxBatchSize` - `number` - (optional, defaults to 1) number of logs to buffer before sending them to InfluxDB. Note that node-influxdb recommends several hundreds.
 - `layout` - (optional, defaults to layouts.messagePassThroughLayout) - the layout to use for logged messages.
-
 
 ## Examples
 

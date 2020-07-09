@@ -212,6 +212,7 @@ test('influxdb-appender', (batch) => {
     const customConfiguration = {
       database: 'custom_db',
       host: '8.8.8.8',
+      port: 1234,
       measurement: 'intoxication',
       username: 'admin',
       password: '12345',
@@ -223,6 +224,7 @@ test('influxdb-appender', (batch) => {
     setTimeout(() => {
       t.test('client should be configured', (assert) => {
         assert.equal(setup.fakeInflux.config.host, '8.8.8.8');
+        assert.equal(setup.fakeInflux.config.port, 1234);
         assert.equal(setup.fakeInflux.config.database, 'custom_db');
         assert.equal(setup.fakeInflux.databases.length, 1);
         assert.equal(setup.fakeInflux.databases[0], 'custom_db');

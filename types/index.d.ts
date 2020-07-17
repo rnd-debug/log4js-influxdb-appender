@@ -2,6 +2,8 @@ export interface InfluxAppender {
   type: '@log4js-node/log4js-influxdb-appender';
   // hostname or IP-address of the target server
   host?: string;
+  // port number of the target server
+  port?: number;
   // name of the target database
   database?: string;
   // user name

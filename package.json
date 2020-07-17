@@ -1,6 +1,6 @@
 {
   "name": "log4js-influxdb-appender",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Simple InfluxDB appender for log4js-node",
   "homepage": "https://github.com/rnd-debug/log4js-influxdb-appender",
   "main": "./lib/index.js",

@@ -46,6 +46,7 @@ time                      data                                                  
 
 - `type` - `log4js-influxdb-appender`
 - `host` - `string` - (optional, default to `localhost`) hostname or IP-address of the target server
+- `port` - `number` - (optional, default to `8086`) port number of the target server
 - `database` - `string` - (optional, default to `log4js_db`) name of the target database
 - `username` - `string``- (optional) user name
 - `password` - `string``- (optional) user password

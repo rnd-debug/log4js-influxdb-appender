@@ -1,6 +1,7 @@
 # Dev 
 node_modules/
 .vscode/
+package-lock.json
 # Test
 logs/
 *.log

@@ -48,8 +48,8 @@ time                      data                                                  
 - `host` - `string` - (optional, default to `localhost`) hostname or IP-address of the target server
 - `port` - `number` - (optional, default to `8086`) port number of the target server
 - `database` - `string` - (optional, default to `log4js_db`) name of the target database
-- `username` - `string``- (optional) user name
-- `password` - `string``- (optional) user password
+- `username` - `string`- (optional) user name
+- `password` - `string`- (optional) user password
 - `measurement` - `string` - (optional) name of the target measurement. If not present, will use the category name of the appender.
 - `fields` - `array` - (optional, default to `['data']`). Fields of the logging event to be used as fields in your InfluxDB.
 - `tags` - `array` - (optional, default to `['level', 'pid']`). Fields of the logging event to be used as tags in your InfluxDB.
